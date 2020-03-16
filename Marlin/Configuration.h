@@ -484,10 +484,15 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
   // Creality Ender-3
-  #define DEFAULT_Kp 26.66
-  #define DEFAULT_Ki 2.05
-  #define DEFAULT_Kd 86.55
+  //#define DEFAULT_Kp 26.66
+  //#define DEFAULT_Ki 2.05
+  //#define DEFAULT_Kd 86.55
 
+  // Ender 3 Pro despues de PID autotune 2020-02-25
+  #define DEFAULT_Kp 22.18
+  #define DEFAULT_Ki 1.61
+  #define DEFAULT_Kd 76.44
+ 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
   //#define DEFAULT_Ki 1.08
@@ -735,7 +740,11 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 103 }
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 103 }
+
+// Despues de tuneo con extruder original de plastico y PLA
+// Grilon 3 blanco a 205 grados. 2020-02-25
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 110.1 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -951,7 +960,10 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { -40, -12, -1.65 }
+//#define NOZZLE_TO_PROBE_OFFSET { -40, -12, -1.65 }
+
+// El -1.45 es con este mount, en 2020-03-16: https://www.thingiverse.com/thing:3584158
+#define NOZZLE_TO_PROBE_OFFSET { -40, -12, -1.45 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
