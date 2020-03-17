@@ -962,8 +962,12 @@
  */
 //#define NOZZLE_TO_PROBE_OFFSET { -40, -12, -1.65 }
 
-// El -1.45 es con este mount, en 2020-03-16: https://www.thingiverse.com/thing:3584158
-#define NOZZLE_TO_PROBE_OFFSET { -40, -12, -1.45 }
+// Con Hero Me fan duct: https://www.thingiverse.com/thing:3182917
+// 2020-03-17
+// For BLTouch & Creality OEM hot-end:
+// Dual 5015 duct: Use -50 X and -16 Y
+// OEM 4010 fan or single 5015 duct: Use -42 X and -16 Y
+#define NOZZLE_TO_PROBE_OFFSET { -42, -16, -1.575 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
