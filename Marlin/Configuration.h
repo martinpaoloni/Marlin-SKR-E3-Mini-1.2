@@ -487,10 +487,10 @@
   //#define DEFAULT_Ki 2.05
   //#define DEFAULT_Kd 86.55
 
-  // Ender 3 Pro despues de PID autotune 2020-02-25
-  #define DEFAULT_Kp 22.18
-  #define DEFAULT_Ki 1.61
-  #define DEFAULT_Kd 76.44
+  // Ender 3 Pro despues de PID autotune - valores leidos el 2020-06-21
+  #define DEFAULT_Kp 20.00
+  #define DEFAULT_Ki 1.42
+  #define DEFAULT_Kd 70.56
  
   // Ultimaker
   //#define DEFAULT_Kp 22.2
@@ -574,7 +574,9 @@
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 200
+//#define EXTRUDE_MAXLENGTH 200
+//Mi bowden es de aprox. 60cm. 2020-06-21
+#define EXTRUDE_MAXLENGTH 1000
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -741,9 +743,8 @@
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 103 }
 
-// Despues de tuneo con extruder original de plastico y PLA
-// Grilon 3 blanco a 205 grados. 2020-02-25
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 110.1 }
+// Reajustado X, Y y E, 2020-06-21
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.4, 80.4, 400, 100.9 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -976,7 +977,9 @@
 // For BLTouch & Creality OEM hot-end:
 // Dual 5015 duct: Use -50 X and -16 Y
 // OEM 4010 fan or single 5015 duct: Use -42 X and -16 Y
-#define NOZZLE_TO_PROBE_OFFSET { -42, -16, -1.575 }
+//#define NOZZLE_TO_PROBE_OFFSET { -42, -16, -1.575 }
+// Valores sacados con M503 el 2020-06-21. hero Me con BLTouch y single 5015.
+#define NOZZLE_TO_PROBE_OFFSET { -40, -12, -0.500 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
