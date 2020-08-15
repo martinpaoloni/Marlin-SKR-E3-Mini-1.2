@@ -594,7 +594,8 @@
 #define PREVENT_LENGTHY_EXTRUDE
 //#define EXTRUDE_MAXLENGTH 200
 //Mi bowden es de aprox. 60cm. 2020-06-21
-#define EXTRUDE_MAXLENGTH 1000
+// Cambiado 2020-08-15 para filament runout sensor. 600mm + 10mm https://www.reddit.com/r/ender3/comments/hymv70/marlin_20x_guide_skr_mini_e3_v12_ender_3/
+#define EXTRUDE_MAXLENGTH 610
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -1198,7 +1199,7 @@
  * RAMPS-based boards use SERVO3_PIN for the first runout sensor.
  * For other boards you may need to define FIL_RUNOUT_PIN, FIL_RUNOUT2_PIN, etc.
  */
-//#define FILAMENT_RUNOUT_SENSOR
+#define FILAMENT_RUNOUT_SENSOR
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define NUM_RUNOUT_SENSORS   1     // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
   #define FIL_RUNOUT_STATE     LOW   // Pin state indicating that filament is NOT present.
@@ -1212,7 +1213,7 @@
   // After a runout is detected, continue printing this length of filament
   // before executing the runout script. Useful for a sensor at the end of
   // a feed tube. Requires 4 bytes SRAM per sensor, plus 4 bytes overhead.
-  //#define FILAMENT_RUNOUT_DISTANCE_MM 25
+  #define FILAMENT_RUNOUT_DISTANCE_MM 10
 
   #ifdef FILAMENT_RUNOUT_DISTANCE_MM
     // Enable this option to use an encoder disc that toggles the runout pin
@@ -1561,7 +1562,8 @@
   //#define NOZZLE_PARK_Y_ONLY          // Y move only is required to park
   #define NOZZLE_PARK_Z_RAISE_MIN   2   // (mm) Always raise Z by at least this distance
   #define NOZZLE_PARK_XY_FEEDRATE 100   // (mm/s) X and Y axes feedrate (also used for delta Z axis)
-  #define NOZZLE_PARK_Z_FEEDRATE    5   // (mm/s) Z axis feedrate (not used for delta printers)
+  // Cambiado de 5 a 3 para filament runout sensor. https://www.reddit.com/r/ender3/comments/hymv70/marlin_20x_guide_skr_mini_e3_v12_ender_3/
+  #define NOZZLE_PARK_Z_FEEDRATE    3   // (mm/s) Z axis feedrate (not used for delta printers)
 #endif
 
 /**
