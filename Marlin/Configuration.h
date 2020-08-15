@@ -1009,14 +1009,10 @@
  */
 //#define NOZZLE_TO_PROBE_OFFSET { -40, -12, -1.65 }
 
-// Con Hero Me fan duct: https://www.thingiverse.com/thing:3182917
-// 2020-03-17
-// For BLTouch & Creality OEM hot-end:
-// Dual 5015 duct: Use -50 X and -16 Y
-// OEM 4010 fan or single 5015 duct: Use -42 X and -16 Y
-//#define NOZZLE_TO_PROBE_OFFSET { -42, -16, -1.575 }
 // Valores sacados con M503 el 2020-06-21. hero Me con BLTouch y single 5015.
-#define NOZZLE_TO_PROBE_OFFSET { -40, -12, -0.500 }
+// Hero Me Gen5, BLTouch_Wing_Medium.stl with BLTouch_Standard_Mount.stl X -55, Y -13
+// Z no seteado
+#define NOZZLE_TO_PROBE_OFFSET { -55, -13, -0.500 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1403,7 +1399,8 @@
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
 //#define MANUAL_X_HOME_POS 0
-//#define MANUAL_Y_HOME_POS 0
+//Hero Me Gen5
+#define MANUAL_Y_HOME_POS -9
 //#define MANUAL_Z_HOME_POS 0
 
 // Use "Z Safe Homing" to avoid homing with a Z probe outside the bed area.
