@@ -1020,7 +1020,7 @@
 
 // Valores sacados con M503 el 2020-06-21. hero Me con BLTouch y single 5015.
 // Hero Me Gen5, BLTouch_Wing_Medium.stl with BLTouch_Standard_Mount.stl X -55, Y -13
-#define NOZZLE_TO_PROBE_OFFSET { -55, -13, 0.200 }
+#define NOZZLE_TO_PROBE_OFFSET { -55, -13, 0.100 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
