@@ -496,10 +496,12 @@
   //#define DEFAULT_Ki 2.05
   //#define DEFAULT_Kd 86.55
 
-  // Ender 3 Pro despues de PID autotune - valores leidos el 2020-06-21
-  #define DEFAULT_Kp 20.00
-  #define DEFAULT_Ki 1.42
-  #define DEFAULT_Kd 70.56
+  // Ender 3 Pro con Hero Me Gen 5 despues de PID autotune - 2020-08-16
+  // https://www.reddit.com/r/3Dprinting/comments/h8xqrn/pid_autotune/
+  // M303 C25 E0 S205 U1
+  #define DEFAULT_Kp 19.77
+  #define DEFAULT_Ki 1.35
+  #define DEFAULT_Kd 72.50
  
   // Ultimaker
   //#define DEFAULT_Kp 22.2
@@ -554,9 +556,16 @@
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
+  //#define DEFAULT_bedKp 10.00
+  //#define DEFAULT_bedKi .023
+  //#define DEFAULT_bedKd 305.4
+
+  // Ender 3 Pro on placa magnetica + vidrio Creality despues de PID autotune - 2020-08-16
+  // https://www.reddit.com/r/3Dprinting/comments/h8xqrn/pid_autotune/
+  // M303 C25 E-1 S60 U1
+  #define DEFAULT_bedKp 107.36
+  #define DEFAULT_bedKi 20.92
+  #define DEFAULT_bedKd 367.19
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
