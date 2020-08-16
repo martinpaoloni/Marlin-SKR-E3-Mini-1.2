@@ -766,8 +766,8 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 103 }
 
 // Reajustado X, Y y E, 2020-06-21
-// Cambiado E de 100.9 (original) a 138.60 (dual gear)
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.4, 80.4, 400, 138.6 }
+// Cambiado E de 100.9 (original) a 138.60 (dual gear), y X e Y devuelta de 80.4 a 80.
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 138.6 }
 
 /**
  * Default Max Feed Rate (mm/s)
